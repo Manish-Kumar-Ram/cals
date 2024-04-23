@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change shape or color</title>
+ 
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+          }
+          #container{
+              display:flex;
+              flex-direction:column;
+              flex-wrap: wrap;
+              height: 100vh;
+              justify-content: center;
+              align-items: center;
+          }
+
+          button{
+            width: 150px;
+            height: 40px;
+              margin-top: 30px;
+             background-color: rgb(240, 6, 240);
+             color: white;
+             font-size: 15px;
+             font-weight: bold;
+             
+              border: 5px solid rgb(43, 39, 39);
+              border-radius: 20px;
+              cursor: pointer;
+          }
+          #circle{
+              height:230px;
+              width:230px;
+              border-radius:50%;
+              background-color:purple;
+              box-sizing: border-box;
+              transition:all 0.6s ease-in-out;
+              transition: 0.6s;  
+          }
+          .inner{
+              background-color:white;
+              position: relative;
+              width: 100px;
+              height: 100px;
+              left:45px;
+              top:60px;
+              left: 60px;
+              transition:all 0.6s ease-in-out;
+          
+          }
+          .triangle-bottomleft {
+            background-color: transparent;
+            position: relative;
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid red; 
+            border-right: 100px solid transparent; 
+            left: 45px; 
+            top: 45px; 
+            transition: all 0.6s ease-in-out;
+        }
+        .Ssquare{
+            width: 120px;
+            height: 120px;
+            left: 55px;
+            top: 60px;
+            background-color: yellow;
+            transition:all 0.6s ease-in-out;
+        
+        }
+        .Scircle{
+            width: 120px;
+            height: 120px;
+            left: 55px;
+            top: 55px;
+            background-color: red;
+            border-radius: 50%;
+            transition:all 0.6s ease-in-out;
+        }
+        .Shexagon{
+            rotate: 90deg;
+            width: 120px;
+            height: 120px;
+            left: 55px;
+            top: 50px;
+            background-color: yellowgreen;
+            border-radius: 5px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            transition:all 0.6s ease-in-out;
+        }
+        .Srectangle{
+            width: 130px;
+            height: 110px;
+            top: 60px;
+            
+            background-color: pink;
+            border-radius: 5px;
+            transition:all 0.6s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "container">
+        <div id = "circle">
+                <div class="inner"></div>
+              
+        </div>
+        <div id = "change-color">
+            <button >Change color</button>
+        </div>
+
+        <div id = "change-shape" >
+            <button>Change shape</button>
+        </div>
+
+    </div>
+    <script >
+
+        const  chShape = document.getElementById("change-shape");
+        const colors = document.getElementById("change-color");
+        const circle = document.getElementById("circle");
+        
+        
+        chShape.addEventListener("click", changeShape);
+        
+        colors.addEventListener('click', function() {
+          let randomR = Math.floor(Math.random() * 256);
+           let randomG = Math.floor(Math.random() * 256);
+            let randomB = Math.floor(Math.random() * 256);
+        
+            circle.style.backgroundColor = color(randomR, randomG, randomB);
+        });
+        
+        function changeShape() {
+            var inner = document.querySelector('.inner');
+            inner.classList.remove("Ssquare", "Scircle", "Shexagon", "Srectangle");
+        
+            var shapes = ["Ssquare", "Scircle", "Shexagon", "Srectangle"];
+            var randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+        
+            inner.classList.add(randomShape);
+        }
+        
+        function color(a, b, c) {
+            return `rgb(${a},${b},${c})`;
+        }
+    </script>
+</body>
+</html>

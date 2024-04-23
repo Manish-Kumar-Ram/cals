@@ -1,0 +1,219 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+svg{
+    width: 40px;
+
+    /* position: absolute; */
+/* } */
+/* .container{
+    /* width: 20%; */
+    /* border: 2px solid red;
+    display: flex;justify-content: center;
+    align-items: center;
+    height: 20vh;
+    /* position: relative; */ 
+    /* height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    border: 2px solid red; */
+/* } */
+/* .content{
+    width: 150px;
+    height: 150px;
+    border-radius: 99px;
+    background: white;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.05),-10px -10px 30px rgba(0,0,0,0.05) inset;
+    position: absolute;
+    top:50%;
+    left: 15%;
+    transform: translate(10%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid blue; */
+
+
+/* } */
+/* label{
+    /* border: solid;
+    width: 25rem;
+    height: 10rem;
+    border-radius: 990px;
+    background: #f3f3f3;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05) inset;
+
+    cursor: pointer; */
+    /* background: #111;
+    display: flex;
+    border-radius: 50px;
+    height: 26px;
+    width: 25rem;
+    border: 2px solid red;
+    width: 50px;
+    align-items: center;
+    justify-content: space-between; */
+
+
+/* }  */
+/* input{ */
+/* display: none; */
+/* } */
+/* .sun{
+    /* color: yellow; */
+    /* margin-top: 0%; */
+    /* color: #f39c12; */
+/* } */
+/* .moon{ 
+  color: #f1c40f;
+}  */
+/* input[type=checkbox]:checked+ .container{
+    background: #2c2c2f;
+}
+input[type=checkbox]:checked+ .container label .content{
+    background: #2c2c2f;
+    left: 50%;
+    transform: translate(-110%,-50%);
+    background: #2c2c2f;
+
+} */ 
+label{
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+background-color: #242121;
+justify-content: space-between;
+margin-top: 5rem;
+position: relative;
+padding: 7px;
+
+}
+label::after+ .checkbox:checked{
+    background-color: white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+   
+
+    margin: 0;
+
+}
+.sun{
+    color: #f1c40f;
+    
+}
+.moon{
+    color: #f1c40f;
+
+}
+body.dark{
+    background-color:  black;
+    transition: background-color 0.5s ease;
+}
+.checkbox{
+    position: absolute;
+    opacity: 0;
+}
+.content{
+    background: #fff;
+    width: 40px;
+    height: 34px;
+    position: absolute;
+ 
+    border-radius: 60%;
+transition: transform 0.2s linear;
+}
+body{
+    transition: background-color 0.5s ease;
+
+}
+
+.checkbox:checked+ label  .content{
+    background-color: white;
+ 
+    transform: translate(60px);
+ }
+ h1{
+    margin-left: 30%;
+  font-size: 50px;
+
+    margin-top: 10%;
+ }
+ label {
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    background-color: #242121;
+    justify-content: space-between;
+    margin-top: 5rem;
+    position: relative;
+    padding: 7px;
+}
+
+label::after + .checkbox:checked {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.sun {
+    color: #f1c40f;
+}
+
+.moon {
+    color: #f1c40f;
+}
+
+body.dark {
+    background-color: black;
+    transition: background-color 0.5s ease;
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.content {
+    background: #fff;
+    width: 40px;
+    height: 34px;
+    position: absolute;
+    border-radius: 60%;
+    transition: transform 0.2s linear;
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+.checkbox:checked + label .content {
+    background-color: white;
+    transform: translate(60px);
+}
+
+h1 {
+    margin-left: 30%;
+    font-size: 5rem;
+    /* margin-top: 10%; */
+        font-weight: bold;
+margin: 100px auto;
+text-align: center;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+body.dark h1 {
+    color: white; /* Set h1 color to white when background is black */
+}
